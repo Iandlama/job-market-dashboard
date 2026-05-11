@@ -6,7 +6,7 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 
 ## 🚀 Live Demo
 
-👉 **[Open Dashboard](https://ТВОЙ-USERNAME.github.io/job-market-dashboard/)**
+👉 **[Open Dashboard](https://iandlama.github.io/job-market-dashboard/)**
 
 
 ## 📈 Features
@@ -36,6 +36,53 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 ├── scaper.py           # Scrape Habr Career
 ├── final_cleaned.csv   # Cleaned dataset (5,000+ rows)
 └── requirements.txt    # Python dependencies
+```
+
+## 🔄 Data Pipeline
+
+### 1. Scraping (`scaper.py`)
+- Scraped **617 vacancies** from [Habr Career](https://career.habr.com/vacancies)
+- Used `cloudscraper` to bypass Cloudflare protection
+- Searched by 32 IT/DS keywords (Python, Data Scientist, DevOps, etc.)
+- Extracted: title, company, salary, skills, date, link
+- Output: `habr_vacancies_5300.csv`
+
+### 2. Cleaning & Merging (`cleaner.py`)
+- Loaded 3 sources: HH.ru (Kaggle), Habr Career (scraped), Global Job Market (Kaggle)
+- Applied IT/DS keyword filter to remove non-tech roles
+- Translated Russian titles to English via `deep-translator` (Google Translate API)
+- Normalized salaries: RUB → USD conversion
+- Extracted experience level from job titles (Junior/Middle/Senior/Lead)
+- Categorized jobs into 12 domains (Data Science, Backend, DevOps, etc.)
+- Removed duplicates by title + company + date
+- Sampled to **5,300 clean records**
+- Output: `final_cleaned.csv`
+
+### 3. Visualization (`vis.py`)
+- Built interactive HTML dashboard with Plotly.js
+- Created 5 charts: histogram, bar charts, box plot
+- Added searchable table with pagination (20 rows/page)
+- Implemented filters by category and experience level
+- Output: `index.html` (hosted on GitHub Pages)
+
+### Pipeline Flow
+```
+Habr Career (scraping)
+       ↓
+   habr_vacancies.csv
+       ↓
+   ┌── cleaner.py ──┐
+   │  Merge 3 sources │
+   │  Clean & translate│
+   │  Deduplicate      │
+   │  Enrich & sample  │
+   └──────────────────┘
+       ↓
+   final_cleaned.csv
+       ↓
+   vis.py (dashboard)
+       ↓
+   index.html → GitHub Pages 🚀
 ```
 
 ## 🔧 How to Run Locally
