@@ -89,20 +89,4 @@ python vis.py
 - **Python, SQL, Docker** are top required skills
 - Median salary: **$85,000/year** (global average)
 
-## 👤 Author
 
-- Made by [@ТВОЙ-USERNAME](https://github.com/ТВОЙ-USERNAME)
-- Educational project for Data Science course
-
----
-
-⭐ Star this repo if you find it useful!
-```
-
-Замени `ТВОЙ-USERNAME` на свой GitHub username, сохрани и отправь в репозиторий:
-
-```bash
-git add README.md
-git commit -m "Add README"
-git push
-```
