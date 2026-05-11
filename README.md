@@ -64,25 +64,7 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 - Implemented filters by category and experience level
 - Output: `index.html` (hosted on GitHub Pages)
 
-### Pipeline Flow
-```
-Habr Career (scraping)
-       ↓
-   habr_vacancies.csv
-       ↓
-   ┌── cleaner.py ──┐
-   │  Merge 3 sources │
-   │  Clean & translate│
-   │  Deduplicate      │
-   │  Enrich & sample  │
-   └──────────────────┘
-       ↓
-   final_cleaned.csv
-       ↓
-   vis.py (dashboard)
-       ↓
-   index.html → GitHub Pages 🚀
-```
+
 
 ## 🔧 How to Run Locally
 
