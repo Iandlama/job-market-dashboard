@@ -41,14 +41,13 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 ## 🔄 Data Pipeline
 
 ### 1. Scraping (`scaper.py`)
-- Scraped vacancies from [Habr Career](https://career.habr.com/vacancies)
+- Scraped vacancies 
 - Used `cloudscraper` to bypass Cloudflare protection
 - Searched by 32 IT/DS keywords (Python, Data Scientist, DevOps, etc.)
 - Extracted: title, company, salary, skills, date, link
-- Output: `habr_vacancies_5300.csv`
+
 
 ### 2. Cleaning & Merging (`cleaner.py`)
-- Loaded 3 sources: HH.ru (Kaggle), Habr Career (scraped), Global Job Market (Kaggle)
 - Applied IT/DS keyword filter to remove non-tech roles
 - Translated Russian titles to English via `deep-translator` (Google Translate API)
 - Normalized salaries: RUB → USD conversion
