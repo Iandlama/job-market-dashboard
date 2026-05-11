@@ -87,6 +87,6 @@ python vis.py
 - **Data Science** is the most in-demand category (27.7%)
 - **Middle-level** positions dominate the market
 - **Python, SQL, Docker** are top required skills
-- Median salary: **$85,000/year** (global average)
+- Median salary: **$77,098/year** (global average)
 
 
