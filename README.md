@@ -41,11 +41,9 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 ## 🔄 Data Pipeline
 
 ### 1. Scraping (`scaper.py`)
-- Scraped vacancies 
 - Used `cloudscraper` to bypass Cloudflare protection
 - Searched by 32 IT/DS keywords (Python, Data Scientist, DevOps, etc.)
 - Extracted: title, company, salary, skills, date, link
-
 
 ### 2. Cleaning & Merging (`cleaner.py`)
 - Applied IT/DS keyword filter to remove non-tech roles
@@ -60,9 +58,12 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 ### 3. Visualization (`vis.py`)
 - Built interactive HTML dashboard with Plotly.js
 - Created 5 charts: histogram, bar charts, box plot
+- Converted salaries to USD format with thousand separators
 - Added searchable table with pagination (20 rows/page)
 - Implemented filters by category and experience level
+- Detected employment type (Full-time, Part-time, Contract)
 - Output: `index.html` (hosted on GitHub Pages)
+
 
 
 
