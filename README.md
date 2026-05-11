@@ -41,7 +41,7 @@ Interactive dashboard analyzing **5,000+ job postings** in Data Science and IT f
 ## 🔄 Data Pipeline
 
 ### 1. Scraping (`scaper.py`)
-- Scraped **617 vacancies** from [Habr Career](https://career.habr.com/vacancies)
+- Scraped vacancies from [Habr Career](https://career.habr.com/vacancies)
 - Used `cloudscraper` to bypass Cloudflare protection
 - Searched by 32 IT/DS keywords (Python, Data Scientist, DevOps, etc.)
 - Extracted: title, company, salary, skills, date, link
